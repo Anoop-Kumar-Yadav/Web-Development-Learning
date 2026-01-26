@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    font-size: 50px; /* Setting 1rem value  */
+}
+
+h1 {
+    /* relative - as root's font size changes , it can change in descendent elemnet whose value are written in rem */
+    /* 1rem = 16px  --> Browser Set it */
+    
+    font-size: 2rem; /* == 200px */
+}

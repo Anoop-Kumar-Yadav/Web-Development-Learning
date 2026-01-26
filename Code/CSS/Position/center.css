@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+#box1 {
+    width: 100px;
+    height: 100px;
+    background: red;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#box2 {
+    width: 100px;
+    height: 100px;
+    background: rgb(215, 203, 203);
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+    /* element ki jitni width hai uska adha piche bhej do  */
+}
+

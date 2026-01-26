@@ -1,0 +1,42 @@
+flowchart TD
+    A[TCP Connection Established<br/>Browser ISN = 1000<br/>Server ISN = 5000] --> B[Browser sends HTML data]
+    
+    B --> C[Data Split into Packets]
+    
+    C --> D[Packet 1: SEQ=1000<br/>500 bytes of HTML<br/>Next SEQ = 1500]
+    C --> E[Packet 2: SEQ=1500<br/>300 bytes of HTML<br/>Next SEQ = 1800]
+    C --> F[Packet 3: SEQ=1800<br/>200 bytes of HTML<br/>Next SEQ = 2000]
+    
+    D --> G[Internet Network<br/>Packets travel different routes]
+    E --> G
+    F --> G
+    
+    G --> H[Packets arrive OUT OF ORDER<br/>at Server]
+    
+    H --> I[❌ Packet 2 arrives first<br/>SEQ=1500, 300 bytes]
+    H --> J[❌ Packet 3 arrives second<br/>SEQ=1800, 200 bytes]
+    H --> K[❌ Packet 1 arrives last<br/>SEQ=1000, 500 bytes]
+    
+    I --> L[TCP Receiver Buffer<br/>Sorts by sequence number]
+    J --> L
+    K --> L
+    
+    L --> M[✅ Reordered correctly:<br/>SEQ=1000: bytes 1-500<br/>SEQ=1500: bytes 501-800<br/>SEQ=1800: bytes 801-1000]
+    
+    M --> N[Complete HTML delivered<br/>to browser in correct order]
+    
+    O[Problems TCP Solves:] --> P[📦 Out of order packets<br/>🔄 Duplicate packets<br/>❌ Lost packets<br/>🔢 Corrupted data]
+    
+    Q[Sequence Number = Byte Position<br/>Like page numbers in a book<br/>Each byte gets a unique number] --> R[Example: 1000 bytes sent<br/>SEQ starts at 1000<br/>SEQ ends at 2000<br/>Each byte: 1000, 1001, 1002... 1999]
+    
+    style A fill:#e1f5fe
+    style D fill:#fff3e0
+    style E fill:#fff3e0
+    style F fill:#fff3e0
+    style I fill:#ffebee
+    style J fill:#ffebee
+    style K fill:#ffebee
+    style M fill:#e8f5e8
+    style N fill:#e8f5e8
+    style O fill:#f3e5f5
+    style Q fill:#f3e5f5

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    display: flex;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+}
+
+.parent {
+    height: 250px;
+    width: 250px;
+}
+/* ------------------------ */
+#child1 {
+    background-color: red;    
+}
+
+#child2 {
+    background-color: rgb(58, 62, 172);    
+}
+
+#child3 {
+    background-color: green;
+}
+
+#child4 {
+    background-color: yellow;    
+}
+/* --------------------------------- */
+
+#parent1 {
+     background-color: pink;
+}
+
+#parent2 {
+     background-color: lightslategrey;
+     display: flex;
+
+     flex-direction: row;
+
+     justify-content: center;  /* work on main axis - row */
+     align-items: center; /* work on cross axis */
+
+     gap: 5px;
+     
+}
+
+
+

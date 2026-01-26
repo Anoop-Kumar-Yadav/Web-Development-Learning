@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+.parent {
+    background-color: red;
+
+    width: 400px;
+    height: 200px;
+}
+
+/* screen width > 600px */
+ /* ----- Old -----[600px]--------New Applied---------- */
+/* @media  (min-width:720px) { 
+    .parent {
+        background-color: black;
+    }
+} */
+
+@media (720 < width) and (width < 1200 ){
+    .parent {
+        background-color: green;
+    }
+    
+    body {
+        background-color: pink;
+    }
+}

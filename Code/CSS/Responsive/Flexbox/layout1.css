@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    display: flex;
+}
+
+.child {
+    width: 50px;
+    height: 50px;
+    
+    background-color: red;
+    border: 3px solid white;
+
+    flex-shrink: 0;
+    /* prevent to be shrink and work with no wrap */
+}
+/* --------------------------------- */
+
+#parent {
+    height: 100%;
+    width: 100%;
+    background-color: lightsteelblue;
+    padding: 10px;
+
+
+    display: flex;
+    gap: 5px;
+
+    /* flex-wrap: wrap; */
+    /* prevent shrink on less space */
+
+    flex-wrap: nowrap;
+    /* work with shrink of child */
+
+
+}
+
+
+
+

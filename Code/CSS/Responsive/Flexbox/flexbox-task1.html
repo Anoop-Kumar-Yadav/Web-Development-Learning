@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .flex-parent {
+        height: 300px;
+        width: 400px;
+        background-color: black;
+        position: relative;
+      }
+      .flex-child {
+        position: absolute;
+        top: 0;
+      }
+
+      #box1 {
+        width: 10%;
+        height: 10%;
+        background-color: green;
+        left: 0%;
+      }
+      #box2 {
+        width: 10%;
+        height: 10%;
+        background-color: red;
+        left: 20%;
+      }
+      #box3 {
+        width: 10%;
+        height: 10%;
+        background-color: blue;
+        left: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-parent">
+      <div class="flex-child" id="box1"></div>
+      <div class="flex-child" id="box2"></div>
+      <div class="flex-child" id="box3"></div>
+    </div>
+  </body>
+</html>

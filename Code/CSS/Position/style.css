@@ -1,0 +1,56 @@
+/* Boilerplate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: black;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+
+    /* display: flex;
+    gap: 4px;
+    flex-wrap: wrap; */
+}
+
+.main-box {
+    height: 200px;
+    width: 200px;
+}
+
+#car1 {
+    background:green;
+
+    position: absolute;
+    top: 90px;
+    left: 0px;
+
+    z-index:3;
+}
+
+#car2 {
+    background: blue;
+
+    position: absolute;
+    top: 70px;
+    left: 50px;
+}
+
+#car3 {
+    background:red;
+
+    position: absolute;
+    top: 100px;
+    left: 90px;
+}
+
+
+
+/* Positon ablsolute matlab hawa me - on z index and can move anywhere without disturbing others 
+--> jo sabse baad me hoga html me , wo sabse uper hoga 
+==> can be control by z-index --> more =>top
+*/

@@ -1,0 +1,39 @@
+flowchart TD
+    A[User types example.com in browser] --> B{Browser Cache Check}
+    
+    B -->|IP found| Z[Connect to IP Address 93.184.216.34]
+    B -->|Not found| C{OS Cache/Hosts File Check}
+    
+    C -->|IP found| Y[Return IP to Browser]
+    C -->|Not found| D[DNS Resolver ISP/Google/Cloudflare]
+    
+    D --> E[Resolver queries Root DNS Server]
+    E --> F[Root DNS replies: Go ask .com TLD servers]
+    
+    F --> D
+    D --> G[Resolver queries .com TLD Server]
+    G --> H[.com TLD replies: Here are authoritative servers for example.com]
+    
+    H --> D
+    D --> I[Resolver queries Authoritative DNS Server]
+    I --> J[Authoritative DNS replies: example.com → 93.184.216.34]
+    
+    J --> D
+    D --> K[Resolver caches result and returns IP to OS]
+    
+    K --> L[OS caches and returns IP to Browser]
+    L --> M[Browser caches IP]
+    Y --> M
+    
+    M --> Z
+    Z --> N[Browser establishes HTTP/HTTPS connection]
+    
+    style A fill:#e1f5fe
+    style B fill:#fff3e0
+    style C fill:#fff3e0
+    style D fill:#f3e5f5
+    style E fill:#e8f5e8
+    style G fill:#e8f5e8
+    style I fill:#e8f5e8
+    style Z fill:#ffebee
+    style N fill:#ffebee

@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    background-color: #0E0E0E;
+}
+
+html {
+    color: #DAC5A7;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+    width: 100%;
+}
+
+
+
+.view-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem 1rem;
+
+    img {
+        width: 70%;
+        object-fit: cover;
+    }
+
+    p {
+        text-align: center;
+        line-height: 1.5;
+        font-size: 1.2rem;
+
+        br {
+            display: none;
+        }
+
+        margin: 0.5rem 0;
+
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: 100;
+
+        span {
+            font-style: italic;
+        }
+    }
+}
+
+.view-2 {
+        padding: 2rem 2rem;
+
+        display: flex;
+        justify-content: center;
+
+        overflow: hidden;
+
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: row;
+
+            position: relative;
+
+            &::after {
+                content: "";
+                height: 100%;
+                width: 30%;
+
+                background-image: linear-gradient(to right,#0e0e0e ,transparent);
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                z-index: 2;
+                pointer-events: none;
+                // Allow user to touch niche wake objects
+            }
+            &::before {
+                content: "";
+                height: 100%;
+                width: 30%;
+
+                background-image: linear-gradient(to left,#0e0e0e ,transparent);
+                
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                z-index: 2;
+                pointer-events: none;
+            }
+
+            .logos {
+                animation-name: marquee;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+
+                animation-direction: both;
+
+                display: flex;
+                gap: 1rem;
+
+                img {
+                    padding:2rem;
+                    width: 12%;
+                }
+            }
+            
+        }
+    }
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100%  {
+        transform: translateX(-100%);
+    }
+}
+
+.view-3 {
+    width: 100%;
+    padding: 1rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    .card {
+
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        border: 1px solid none;
+        background-color: #181716;
+        border-radius: 1.5px;
+
+        box-shadow: inset 0 0 1px #DAC5A7;
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 300;
+            text-transform: uppercase;
+
+            padding-bottom: 1rem;
+        }
+
+        .num {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 100;
+            word-spacing: 1px;
+        }
+
+        a {
+            padding-top: 2rem;
+            display: flex;
+            justify-content: flex-start;
+
+            gap: 10px;
+
+            p {
+                text-transform: uppercase;
+                font-weight: 100;
+                font-size: 0.8rem;
+
+                margin: auto 0px;
+
+                color: #DAC5A7;
+            }
+
+            div.btn-icon {
+                padding: 4px;
+                border-radius: 50%;
+                box-shadow: inset 0 0 1px #DAC5A7;
+
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                background-size: cover;
+
+                transition: transform 0.5s ease;
+
+                &:hover{
+                    box-shadow: 0 0 3px #DAC5A7;
+                    transform:  rotate(45deg);
+                }
+
+                img {
+                    width: 15px;
+                }
+            }
+
+        }
+
+
+    }
+}
+
+@media (min-width : 1020px) {
+
+    html {
+        // 1vw ki value is range me rakhta hai
+        font-size: clamp(16px, 1vw, 20px);
+    }
+
+    .view-1 {
+        img {
+            width: 35%;
+        }
+
+        h1 {
+            font-size: 7.3rem;
+            line-height: 0.9;
+            margin-bottom: 1.2rem;
+
+            span {
+                font-style: italic;
+            }
+        }
+
+        p {
+            br {
+                display: block;
+            }
+        }
+    }
+
+    .view-2 {
+        padding: 2rem 8rem;
+
+        .marquee {
+            width: 80%;
+        }
+    }
+
+    .view-3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        align-items: center;
+    }
+}

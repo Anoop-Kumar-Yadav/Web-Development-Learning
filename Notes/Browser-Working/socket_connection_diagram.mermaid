@@ -1,0 +1,43 @@
+flowchart TD
+    A[User types: https://example.com] --> B[Browser analyzes URL]
+    
+    B --> C{Protocol Detection}
+    C -->|https://| D[Port 443 HTTPS]
+    C -->|http://| E[Port 80 HTTP]
+    C -->|ftp://| F[Port 21 FTP]
+    C -->|Custom :8080| G[Custom Port 8080]
+    
+    D --> H[Browser creates socket]
+    E --> H
+    F --> H
+    G --> H
+    
+    H --> I[Browser picks random ephemeral port<br/>Range: 49152-65535<br/>Example: 49152]
+    
+    I --> J[Socket Formation]
+    
+    J --> K[Client Socket:<br/>192.168.1.10:49152<br/>IP:Port]
+    J --> L[Server Socket:<br/>93.184.216.34:443<br/>IP:Port]
+    
+    K --> M[TCP Connection Request]
+    L --> M
+    
+    M --> N[3-Way Handshake begins:<br/>SYN from 192.168.1.10:49152<br/>to 93.184.216.34:443]
+    
+    N --> O[Connection Established<br/>Unique socket pair identifies this connection]
+    
+    style A fill:#e1f5fe
+    style C fill:#fff3e0
+    style D fill:#e8f5e8
+    style E fill:#e8f5e8
+    style F fill:#e8f5e8
+    style G fill:#e8f5e8
+    style K fill:#f3e5f5
+    style L fill:#f3e5f5
+    style O fill:#ffebee
+    
+    P[Well-known Ports<br/>HTTP: 80<br/>HTTPS: 443<br/>FTP: 21<br/>SSH: 22<br/>DNS: 53] 
+    Q[Ephemeral Ports<br/>Range: 49152-65535<br/>Randomly assigned<br/>by OS for outbound<br/>connections]
+    
+    style P fill:#e8f5e8
+    style Q fill:#f3e5f5

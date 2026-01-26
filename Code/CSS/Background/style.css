@@ -1,0 +1,51 @@
+/* Boilerplate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: black;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.main-box {
+    height: 200px;
+    width: 200px;
+}
+
+#box1 {
+    background: linear-gradient(red , blue);
+}
+
+#box2 {
+    background: linear-gradient(orange , white , green );
+}
+
+#box3 {
+    background: linear-gradient(to right,red, blue);
+}
+#box4 {
+    background: linear-gradient(to left,red, blue);
+}
+
+#box5 {
+    background-image: url("./images/bg1.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#box6 {
+    background: radial-gradient(red,blue,rgb(181, 192, 181));
+    border-radius: 50%;
+}
+
+
