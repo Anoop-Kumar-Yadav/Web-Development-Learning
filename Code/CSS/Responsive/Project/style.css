@@ -111,7 +111,7 @@ main {
 }
 .view-3 {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 1rem 1.3rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -141,20 +141,21 @@ main {
   font-weight: 100;
   word-spacing: 1px;
 }
-.view-3 .card a {
+
+a.btn {
   padding-top: 2rem;
   display: flex;
   justify-content: flex-start;
   gap: 10px;
 }
-.view-3 .card a p {
+a.btn p {
   text-transform: uppercase;
   font-weight: 100;
   font-size: 0.8rem;
   margin: auto 0px;
   color: #DAC5A7;
 }
-.view-3 .card a div.btn-icon {
+a.btn div.btn-icon {
   padding: 4px;
   border-radius: 50%;
   box-shadow: inset 0 0 1px #DAC5A7;
@@ -164,12 +165,194 @@ main {
   background-size: cover;
   transition: transform 0.5s ease;
 }
-.view-3 .card a div.btn-icon:hover {
+a.btn div.btn-icon:hover {
   box-shadow: 0 0 3px #DAC5A7;
   transform: rotate(45deg);
 }
-.view-3 .card a div.btn-icon img {
+a.btn div.btn-icon img {
   width: 15px;
+}
+
+.view-4 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-4 .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-4 .title h1 {
+  text-align: center;
+}
+.view-4 .title .btn {
+  justify-content: center;
+  padding: 0;
+}
+.view-4 .main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 1rem;
+}
+.view-4 .main-content .content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.view-4 .main-content .content .btn0 {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+}
+.view-4 .main-content .content .image-btn {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+  font-size: small;
+}
+.view-4 .main-content .content .image-btn h3 {
+  font-weight: 200;
+}
+
+.view-5 {
+  width: 100%;
+  padding: 6rem 1rem;
+}
+.view-5 .part-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.view-5 .part-1 p {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+.view-5 .part-1 h2 {
+  font-size: 6rem;
+  font-weight: 100;
+}
+.view-5 .part-1 h2 span {
+  font-style: italic;
+}
+.view-5 .part-1 p.main-content {
+  margin: 2rem 0rem;
+}
+.view-5 .part-2 {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  justify-content: space-between;
+}
+.view-5 .part-2 .part2-2 {
+  grid-column: 1/span 1;
+  grid-row: 1/span 6;
+}
+.view-5 .part-2 .s1 {
+  margin-top: 8rem;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.view-5 .part-2 .s2 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.view-5 .part-2 .s3 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.view-5 .part-2 .s4 {
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
+.view-5 .part-2 .s5 {
+  grid-column: 2/3;
+  grid-row: 5/6;
+}
+
+.view-5 .content {
+  box-shadow: inset 0 0 1px #DAC5A7;
+  border-radius: 2px;
+  margin: 1rem;
+  padding: 3rem;
+  background-color: #181716;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.view-5 .content h3 {
+  font-weight: 100;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.view-5 .content h2 {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1.8rem;
+}
+.view-5 .content p.main-content,
+.view-5 .content ul {
+  font-weight: 100;
+}
+.view-5 .content ul {
+  list-style-type: disc;
+  line-height: 3rem;
+  padding-left: 3rem;
+}
+.view-5 .content .tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  box-shadow: inset 0 0 1px #DAC5A7;
+  border-radius: 2px;
+  padding: 0.4rem 0.6rem;
+}
+
+.part-2 .part2-2 {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  align-items: center;
+  width: 10%;
+}
+.part-2 .part2-2 .circle {
+  margin: 0.5rem;
+  text-align: center;
+  border-radius: 50%;
+  padding: 0.8rem;
+  box-shadow: inset 0 0 1px #DAC5A7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-color: #181716;
+}
+.part-2 .part2-2 .circle img {
+  transform: rotate(135deg);
+}
+.part-2 .part2-2 .circle p {
+  padding: 0.1rem 0.25rem;
+}
+.part-2 .part2-2 .line {
+  height: 20%;
+  width: 1px;
+  background-color: #DAC5A7;
+}
+
+.view-5 div[class="content blank"] {
+  display: none;
 }
 
 @media (min-width: 1020px) {
@@ -201,5 +384,80 @@ main {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+  }
+  .view-4 .title {
+    width: 100%;
+    padding: 4rem 6rem 1rem 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .view-4 .title h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+  .view-4 .title .btn {
+    justify-content: center;
+    padding: 0;
+  }
+  .view-4 .main-content {
+    padding: 0rem 4rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 1.5rem;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .view-5 {
+    width: 100%;
+    padding: 6rem 1rem;
+  }
+  .view-5 .part-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .view-5 .part-1 p {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+  .view-5 .part-1 h2 {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+  .view-5 .part-1 h2 span {
+    font-style: italic;
+  }
+  .view-5 .part-1 p.main-content {
+    margin: 2rem 0rem;
+  }
+  .view-5 .part-2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .view-5 .part-2 .part2-1 {
+    padding-top: 6rem;
+    width: 45%;
+  }
+  .view-5 .part-2 .part2-3 {
+    padding-top: 6rem;
+    width: 45%;
+  }
+  .part2-1 > :nth-child(odd) {
+    visibility: hidden;
+  }
+  .part2-3 > :nth-child(even) {
+    visibility: hidden;
+  }
+  .view-5 div[class="content blank"] {
+    display: block;
+  }
+  .part-2 .part2-2 .line {
+    height: 8%;
   }
 }/*# sourceMappingURL=style.css.map */
