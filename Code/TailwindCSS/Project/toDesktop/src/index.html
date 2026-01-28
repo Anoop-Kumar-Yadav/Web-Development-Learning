@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="flex gap-3 bg-transparent justify-between items-center mb-4 mx-6 mt-3">
+        <a href="" id="brand" class="flex justify-center items-center gap-2">
+            <img src="../images/assets/asset 0.png" alt="Logo" class="object-cover max-w-12 max-h-12">
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+        </a>
+
+        <button class="lg:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-bars text-gray-600"></i>
+        </button>
+
+        <div id="nav-menu" class="hidden lg:flex justify-center items-center w-full gap-x-14">
+            <a href="" class="text-[1.2rem] font-medium font-display hover:text-[#465BF8]">Pricing</a>
+            <a href="" class="text-[1.2rem] font-medium font-display hover:text-[#465BF8]">Docs</a>
+            <a href="" class="text-[1.2rem] font-medium font-display hover:text-[#465BF8]">Changelog</a>
+            <a href="" class="text-[1.2rem] font-medium font-display hover:text-[#465BF8]">Blog</a>
+            <a href="" class="text-[1.2rem] font-medium font-display hover:text-[#465BF8]">Login</a>
+        </div>
+
+        <button
+            class="hidden lg:flex border-2 border-gray-300  min-w-max px-4 py-2 gap-3 rounded-lg hover:border-gray-400">
+            <img src="../images/assets/asset 1.svg" alt="" srcset="">
+            <span class="text-[1rem] font-bold font-display ">Electron Developers</span>
+            <img src="../images/assets/asset 51.svg" alt="" sizes="" srcset="">
+        </button>
+        <div id="m-view" class="hidden fixed inset-0 bg-white">
+
+            <div class="flex justify-between items-center m-6 mt-3">
+                <a href="" id="brand" class="flex justify-center items-center gap-2">
+                    <img src="../images/assets/asset 0.png" alt="Logo" class="object-cover max-w-12 max-h-12">
+                    <span class="text-lg font-medium font-display">ToDesktop</span>
+                </a>
+                <button class="lg:hidden" onclick="handleMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                    <!-- <img src="../images/assets/asset 52.svg" alt="" srcset=""> -->
+                </button>
+            </div>
+
+            <div class="px-4">
+
+                <a href="" class="p-3 block text-[1rem] font-bold font-display hover:bg-gray-50 rounded-md">Pricing</a>
+
+                <a href="" class="p-3 block text-[1rem] font-bold font-display   hover:bg-gray-50 rounded-md">Docs</a>
+
+                <a href=""
+                    class="p-3 block text-[1rem] font-bold font-display   hover:bg-gray-50 rounded-md">Changelog</a>
+                <a href="" class="p-3 block text-[1rem] font-bold font-display  hover:bg-gray-50  rounded-md">Blog</a>
+
+                <a href="" class="p-3 block text-[1rem] font-bold font-display  hover:bg-gray-50 rounded-md">Login</a>
+
+                <div id="line" class="my-3 h-[1px] w-full bg-gray-100"></div>
+
+                <a href="" class="p-3  text-lg font-medium font-display  hover:bg-gray-50 rounded-md flex gap-4">
+                    <img src="../images/assets/asset 1.svg" alt="" srcset="">
+                    <span class="text-lg font-medium font-display">Electron Developers</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <!-- her section -->
+        <div id="hero" class="z-[-1] min-h-screen bg-gradient-to-br from-[#F5F3FF] via-[#FEFCF1] to-transparent">
+
+            <!-- <div id="hero-container" class="max-w-4xl mx-auto relative">
+                <div id="version-text" class="py-1 rounded-lg bg-[#FFF6CC] border border-[#e7d993] shadow-md absolute top-10 left-8 flex justify-start items-center p-2 gap-2 ">
+                    <div id="disc" class="size-5 bg-[#FACC15] border border-[#cfc384] rounded-full"></div>
+
+                    <div id="version" class="font-display text-[#713F12] text-[0.9rem] font-[500] ">v0.36.2</div>
+
+                    <i class="fa-solid fa-arrow-right text-[#A16207] font-light"></i>
+
+                </div>
+
+
+            </div> -->
+
+            <div id="hero-container" class="max-w-4xl mx-auto px-6 pb-32 flex flex-col">
+
+                <div id="version-text" class="flex m-6">
+                    <div class="w-2 h-2 bg-yellow-400 rounded-full border-yellow-600"></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </main>
+
+</body>
+<script src="script.js"></script>
+
+</html>
